@@ -51,7 +51,7 @@ class Search extends Component {
             handleInputChange={this.handleInputChange}
             breeds={this.state.breeds}
           />
-          <SearchResults results={this.state.results} />
+          <SearchResults results={this.state.results} handleInputChange={this.handleInputChange} />
         </Container>
       </div>
     );

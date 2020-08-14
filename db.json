@@ -8,19 +8,19 @@
         },
         {
             "id": 2,
-            "fullname": "Paul Aglipay",
+            "fullname": "User 1",
             "jobtitle": "Network Engineer",
             "image": "https://images.dog.ceo/breeds/collie-border/n02106166_3416.jpg"
         },
         {
             "id": 3,
-            "fullname": "Paul Aglipay",
+            "fullname": "Admin1",
             "jobtitle": "Software Engineer",
             "image": "https://images.dog.ceo/breeds/collie-border/n02106166_3416.jpg"
         },
         {
             "id": 4,
-            "fullname": "Paul Aglipay",
+            "fullname": "Customer",
             "jobtitle": "MERN Engineer",
             "image": "https://images.dog.ceo/breeds/collie-border/n02106166_3416.jpg"
         }

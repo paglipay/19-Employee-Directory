@@ -17,6 +17,5 @@
   },
   "homepage": "https://github.com/paglipay/19-Employee-Directory#readme",
   "dependencies": {
-    "axios": "^0.19.2"
   }
 }

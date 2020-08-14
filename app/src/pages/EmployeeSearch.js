@@ -12,6 +12,7 @@ class EmployeeSearch extends Component {
     employees: [],
     results: [],
     isAsc: true,
+    currentActiveObj: {},
     error: ""
   };
 
@@ -53,6 +54,12 @@ class EmployeeSearch extends Component {
     this.setState({ isAsc: !this.state.isAsc });
   };
 
+  setCurrentActiveObj = async (obj) => {
+    console.log('setCurrentActiveObj:')
+    await this.setState({ currentActiveObj: obj });
+    console.log(this.state.currentActiveObj)
+  };
+
   handleInputChange = event => {
     this.setState({ search: event.target.value });
   };
@@ -87,7 +94,7 @@ class EmployeeSearch extends Component {
             handleInputChange={this.handleInputChange}
             employees={this.state.employees}
           />
-          <SearchResults results={this.state.results} />
+          <SearchResults results={this.state.results} setCurrentActiveObj={this.setCurrentActiveObj} currentActiveObj={this.state.currentActiveObj} />
         </Container>
       </div>
     );

@@ -1,34 +1,40 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
+import React from "react";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Card from "../Card";
 // import "./style.css";
 
 // Using the datalist element we can create autofill suggestions based on the props.employees array
-function MyModal() {
-    const [show, setShow] = useState(false);
+function MyModal(props) {
+    // const [show, setShow] = useState(false);
 
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+    // const handleClose = () => setShow(false);
+    // const handleShow = () => setShow(true);
 
     return (
         <>
-            <Button variant="primary" onClick={handleShow}>
+            {/* <Button variant="primary" onClick={props.handleShow}>
                 Launch demo modal
-        </Button>
+            </Button> */}
 
-            <Modal show={show} onHide={handleClose}>
+            <Modal show={props.show} onHide={props.handleClose}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Modal heading</Modal.Title>
+                    <Modal.Title>Shall this dog live or die?</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+                <Modal.Body>
+                <Card image={props.currentObj.image} handleBtnClick={props.handleBtnClick} />
+                    <br />
+                    <p>Woohoo, you're reading this text in a modal!</p>
+                </Modal.Body>
                 <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClose}>
+                    <Button variant="secondary" onClick={props.handleClose}>
                         Close
-            </Button>
-                    <Button variant="primary" onClick={handleClose}>
+                    </Button>
+                    <Button variant="primary" onClick={props.handleClose}>
                         Save Changes
-            </Button>
+                    </Button>
                 </Modal.Footer>
             </Modal>
         </>
