@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/paglipay/19-Employee-Directory/issues"
   },
-  "homepage": "https://github.com/paglipay/19-Employee-Directory#readme"
+  "homepage": "https://github.com/paglipay/19-Employee-Directory#readme",
+  "dependencies": {
+    "axios": "^0.19.2"
+  }
 }

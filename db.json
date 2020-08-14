@@ -1,0 +1,39 @@
+{
+    "employees": [
+        {
+            "id": 1,
+            "fullname": "Paul Aglipay",
+            "jobtitle": "Developer",
+            "image": "https://images.dog.ceo/breeds/collie-border/n02106166_3416.jpg"
+        },
+        {
+            "id": 2,
+            "fullname": "Paul Aglipay",
+            "jobtitle": "Network Engineer",
+            "image": "https://images.dog.ceo/breeds/collie-border/n02106166_3416.jpg"
+        },
+        {
+            "id": 3,
+            "fullname": "Paul Aglipay",
+            "jobtitle": "Software Engineer",
+            "image": "https://images.dog.ceo/breeds/collie-border/n02106166_3416.jpg"
+        }
+    ],
+    "posts": [
+        {
+            "id": 1,
+            "title": "json-server",
+            "author": "typicode"
+        }
+    ],
+    "comments": [
+        {
+            "id": 1,
+            "body": "some comment",
+            "postId": 1
+        }
+    ],
+    "profile": {
+        "name": "typicode"
+    }
+}
