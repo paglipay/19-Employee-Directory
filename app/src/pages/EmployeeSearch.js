@@ -8,6 +8,7 @@ import Alert from "../components/Alert";
 class EmployeeSearch extends Component {
   state = {
     search: "",
+    breeds: [],
     employees: [],
     results: [],
     isAsc: true,
@@ -16,12 +17,27 @@ class EmployeeSearch extends Component {
 
   // When the component mounts, get a list of all available base breeds and update this.state.breeds
   componentDidMount() {
-    API.getBaseEmployeesList()
+
+    API.getDogsOfBreed('corgi')
       .then(res => {
         console.log(res.data.message)
-        this.setState({ employees: res.data.message })
+        this.setState({ breeds: res.data.message })
+
+        API.getEmployeesOfId(this.state.search)
+          .then(res => {
+            if (res.data.status === "error") {
+              throw new Error(res.data);
+            }
+            res.data.map(e => e.image = this.state.breeds[Math.floor(Math.random() * 50)])
+            this.setState({ results: res.data, error: "" });
+          })
+          .catch(err => this.setState({ error: err }));
 
       })
+      .catch(err => console.log(err));
+
+    API.getBaseEmployeesList()
+      .then(res => this.setState({ employees: res.data.message }))
       .catch(err => console.log(err));
   }
 
@@ -48,12 +64,12 @@ class EmployeeSearch extends Component {
         if (res.data.status === "error") {
           throw new Error(res.data);
         }
-
-        console.log(res.data)
+        res.data.map(e => e.image = this.state.breeds[Math.floor(Math.random() * 10)])
         this.setState({ results: res.data, error: "" });
       })
       .catch(err => this.setState({ error: err }));
   };
+
   render() {
     return (
       <div>

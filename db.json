@@ -17,6 +17,12 @@
             "fullname": "Paul Aglipay",
             "jobtitle": "Software Engineer",
             "image": "https://images.dog.ceo/breeds/collie-border/n02106166_3416.jpg"
+        },
+        {
+            "id": 4,
+            "fullname": "Paul Aglipay",
+            "jobtitle": "MERN Engineer",
+            "image": "https://images.dog.ceo/breeds/collie-border/n02106166_3416.jpg"
         }
     ],
     "posts": [
